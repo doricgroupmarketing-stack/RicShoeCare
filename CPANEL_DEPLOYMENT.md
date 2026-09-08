@@ -1,10 +1,56 @@
 # HostAfrica cPanel Deployment Guide for RIC Shoe Care
 
-This guide explains how to deploy this Node.js web application to **HostAfrica cPanel** using the built-in **"Setup Node.js App"** tool.
+This guide explains how to deploy this Node.js web application to **HostAfrica cPanel** using **Git Version Control** or manual upload.
 
 ---
 
-## Step 1: Export Your Project
+## Method A: Deploying with cPanel Git Version Control (Recommended)
+
+### 1. Push to GitHub
+Ensure your latest code, including the pre-built `dist/` folder and `.cpanel.yml`, is committed and pushed to your GitHub repository:
+```bash
+git add .
+git commit -m "Deploy update"
+git push origin main
+```
+
+### 2. Configure Node.js in cPanel
+1. In cPanel, navigate to **Software** → **Setup Node.js App**.
+2. Click **Create Application**:
+   - **Node.js version**: `20.x` (or `18.x`)
+   - **Application mode**: `Production`
+   - **Application root**: `repositories/RicShoeCare` (this maps to `/home/ricshoec/repositories/RicShoeCare/`)
+   - **Application URL**: select your domain / subdomain (e.g. `ricshoecare.co.za`)
+   - **Application startup file**: `app.js`
+3. Click **Create**.
+
+### 3. Clone Repository in cPanel Git Version Control
+1. In cPanel, navigate to **Files** → **Git Version Control**.
+2. Click **Create**:
+   - **Clone URL**: your GitHub repository URL (e.g., `https://github.com/doricgroup/RicShoeCare.git`)
+   - **Repository Path**: `/home/ricshoec/repositories/RicShoeCare`
+   - **Repository Name**: `RicShoeCare`
+3. Click **Create**.
+
+### 4. Deploy via .cpanel.yml
+1. In **Git Version Control**, click **Manage** next to `RicShoeCare`.
+2. Open the **Pull or Deploy** tab.
+3. Click **Update from Remote** (to pull the latest commit from GitHub).
+4. Click **Deploy HEAD Commit**.
+   - The `.cpanel.yml` file will safely prepare the files in `/home/ricshoec/repositories/RicShoeCare/` and touch `tmp/restart.txt` to trigger Phusion Passenger to reload.
+
+### 5. Install NPM Packages
+1. In cPanel, go back to **Setup Node.js App**.
+2. Click the **Edit** (pencil) icon next to your app.
+3. Click **Run NPM Install** (only needed on initial deploy or when adding new dependencies).
+4. *(Optional)* Add environment variable `GEMINI_API_KEY` under **Environment variables** if using live AI diagnosis.
+5. Click **Restart**. Your website is now live!
+
+---
+
+## Method B: Deploying via File Manager (ZIP Upload)
+
+### Step 1: Export Your Project
 1. In the AI Studio interface, click the **Settings** / Menu icon in the top right corner.
 2. Click **Download ZIP**.
 3. The downloaded ZIP contains:
@@ -21,36 +67,25 @@ This guide explains how to deploy this Node.js web application to **HostAfrica c
 3. Click the blue **Create Application** button:
    - **Node.js version**: Choose **20.x** (or the latest available: 18.x or 20.x).
    - **Application mode**: **Production**.
-   - **Application root**: Enter a directory name, e.g. `ric-app` (or your domain folder).
-   - **Application URL**: Select your domain from the dropdown (e.g. `yourdomain.co.za` or `subdomain.yourdomain.co.za`).
+   - **Application root**: Enter `ricshoecare`.
+   - **Application URL**: Select your domain from the dropdown.
    - **Application startup file**: Enter **`app.js`**.
 4. Click **Create** (top right).
-5. cPanel will generate a virtual environment and show an application card.
 
 ---
 
 ## Step 3: Upload Files via File Manager
-1. In cPanel, navigate to **File Manager** (under Files).
-2. Open the application folder you created in Step 2 (e.g. `/home/username/ric-app`).
-3. Click **Upload** in the top toolbar.
-4. Upload the project ZIP file.
-5. Once uploaded, right-click the ZIP file and click **Extract**.
-6. Ensure that `app.js`, `package.json`, `dist/`, and `data/` are directly inside your application root folder (not nested in an extra subfolder).
+1. In cPanel, navigate to **File Manager**.
+2. Open `/home/ricshoec/ricshoecare/`.
+3. Click **Upload** and upload the ZIP file.
+4. Extract the ZIP directly into this folder.
+5. Ensure `app.js`, `package.json`, `dist/`, and `data/` are located directly in `/home/ricshoec/ricshoecare/`.
 
 ---
 
-## Step 4: Run NPM Install & Configure Environment
-1. Return to cPanel → **Setup Node.js App**.
-2. Click the **Edit** (pencil) icon next to your app.
-3. Click the **Run NPM Install** button.
-   *(Wait 1–2 minutes for packages to finish installing)*.
-4. (Optional) Under **Environment variables**:
-   - Click **Add Variable**:
-     - Name: `GEMINI_API_KEY`
-     - Value: your Gemini API key (for the AI Shoe Diagnosis feature).
-5. Click **Save** and then click **Restart** at the top.
+## Step 4: Run NPM Install & Restart
+1. Go to **Setup Node.js App** → Edit your app.
+2. Click **Run NPM Install**.
+3. Click **Restart**.
+4. Click **Open URL** to test your live website!
 
----
-
-## Step 5: Test Your Website
-Click **Open URL** or navigate to your domain in your browser. Your site should now load cleanly!

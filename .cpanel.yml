@@ -2,4 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ricshoec/repositories/RicShoeCare/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/mkdir -p /home/ricshoec/repositories/RicShoeCare/
+    - if [ "${PWD%/}" != "/home/ricshoec/repositories/RicShoeCare" ]; then /bin/cp -R * /home/ricshoec/repositories/RicShoeCare/; fi
+    - /bin/mkdir -p /home/ricshoec/repositories/RicShoeCare/tmp
+    - /bin/touch /home/ricshoec/repositories/RicShoeCare/tmp/restart.txt
+
