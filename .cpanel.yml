@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ricshoec/ricshoecare/
+    - export DEPLOYPATH=/home/ricshoec/repositories/RicShoeCare/
     - /bin/cp -R * $DEPLOYPATH
