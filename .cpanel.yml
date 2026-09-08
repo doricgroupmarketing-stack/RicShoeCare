@@ -6,4 +6,7 @@ deployment:
     - if [ "${PWD%/}" != "/home/ricshoec/repositories/RicShoeCare" ]; then /bin/cp -R * /home/ricshoec/repositories/RicShoeCare/; fi
     - /bin/mkdir -p /home/ricshoec/repositories/RicShoeCare/tmp
     - /bin/touch /home/ricshoec/repositories/RicShoeCare/tmp/restart.txt
-
+    - cd /home/ricshoec/repositories/RicShoeCare/ && npm install
+    - cd /home/ricshoec/repositories/RicShoeCare/ && npm run build
+    - /bin/mkdir -p /home/ricshoec/repositories/RicShoeCare/public
+    - /bin/cp -R /home/ricshoec/repositories/RicShoeCare/dist/* /home/ricshoec/repositories/RicShoeCare/public/
