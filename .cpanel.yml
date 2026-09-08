@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ricshoec/public_html/
+    - export DEPLOYPATH=/home/ricshoec/ricshoecare/
     - /bin/cp -R * $DEPLOYPATH
