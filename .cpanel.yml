@@ -1,15 +1,5 @@
 ---
 deployment:
-  targets:
-    public:
-      domain: ricshoecare.com
-      path: /
-      excluded_paths:
-        - node_modules
-        - .git
-        - src
   tasks:
-    - export DEPLOYPATH=/home/ricshoecare/public_html
-    - /usr/bin/npm install
-    - /usr/bin/npm run build
-    - /bin/cp -r dist/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/ricshoec/public_html/
+    - /bin/cp -R * $DEPLOYPATH
