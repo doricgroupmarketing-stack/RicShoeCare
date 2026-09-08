@@ -1,0 +1,211 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Ric Shoe Polish",
+      "price": 18,
+      "description": "Restore and protect your leather footwear with our high-quality shoe polish. Enriched with a blend of natural waxes, RIC Shoe Polish is designed to deliver a long-lasting shine and preserve leather integrity!\n\nRIC Shoe Polish is available in four (4) classic colors to suit your specific tastes:\n• Black\n• Dark Tan\n• Mid Brown\n• Toney Red\n\nWe also offer RIC Shoe Polish in three (3) sizes to suit each and every consumer:\n• Small (15ml / 12gms)\n• Medium (40ml / 32gms)\n• Large (100ml / 80gms)",
+      "image_url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=600",
+      "gallery": [],
+      "category": "Polish",
+      "rating": 4.9,
+      "reviews": 128,
+      "features": [
+        "Contains natural carnauba wax",
+        "Water-resistant protection",
+        "Restores color depth",
+        "Available in 4 Classic Colors"
+      ],
+      "sizes": [
+        "Small (15ml)",
+        "Medium (40ml)",
+        "Large (100ml)"
+      ],
+      "colors": [
+        "Black",
+        "Dark Tan",
+        "Mid Brown",
+        "Toney Red"
+      ],
+      "created_at": "2023-01-01T00:00:00.000Z",
+      "updated_at": "2023-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-7",
+      "name": "Luxury Shoe Cream",
+      "price": 24,
+      "description": "Nourish and revitalize your leather shoes and articles with our rich shoe cream. It is formulated to soften and deliver a long–lasting shine.\n\nRIC Shoe Cream is available in five (5) vibrant shades to match your footwear perfectly:\n• Black\n• Tan\n• Dark Tan\n• Neutral\n• Calf white\n\nWe offer RIC Shoe Creams in two (2) convenient sizes to suit each and every consumer:\n• Small (50ml)\n• Large (100ml)",
+      "image_url": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600",
+      "gallery": [],
+      "category": "Cream",
+      "rating": 4.8,
+      "reviews": 95,
+      "features": [
+        "High pigment concentration",
+        "Softens leather",
+        "Long-lasting shine",
+        "Available in 5 Vibrant Shades"
+      ],
+      "sizes": [
+        "Small (50ml)",
+        "Large (100ml)"
+      ],
+      "colors": [
+        "Black",
+        "Tan",
+        "Dark Tan",
+        "Neutral",
+        "Calf white"
+      ],
+      "created_at": "2023-01-02T00:00:00.000Z",
+      "updated_at": "2023-01-02T00:00:00.000Z"
+    },
+    {
+      "id": "prod-8",
+      "name": "Suede Renovator Spray",
+      "price": 20,
+      "description": "Gently clean, nourish and revitalize your suede items with our restorative RIC Suede Cleaner. It is specially formulated to refresh and restore their natural color for a renewed appearance.\n\nRIC Suede Cleaner is available in six (6) dynamic colors, ensuring all your suede items are well catered to:\n• Black\n• Brown\n• Dark Brown\n• Neutral\n• Kashmire\n\nWe offer RIC Suede Cleaner in two (2) sizes to suit your needs:\n• Standard (200ml)\n• Large (400ml)",
+      "image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600",
+      "gallery": [],
+      "category": "Suede",
+      "rating": 4.7,
+      "reviews": 156,
+      "features": [
+        "Restores color",
+        "Conditions suede",
+        "Includes waterproofing agents",
+        "Available in 6 Dynamic Colors"
+      ],
+      "sizes": [
+        "Standard (200ml)",
+        "Large (400ml)"
+      ],
+      "colors": [
+        "Black",
+        "Brown",
+        "Dark Brown",
+        "Neutral",
+        "Kashmire"
+      ],
+      "created_at": "2023-01-03T00:00:00.000Z",
+      "updated_at": "2023-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "prod-9",
+      "name": "Professional Leather Dye",
+      "price": 28,
+      "description": "Achieve deep and uniform color restoration or a bold new look with our penetrating leather dye.\n\nRIC Leather Dye is available in (2) essential colors for versatile applications:\n• Black\n• Brown\n\nWe offer RIC Leather Dye in three (3) sizes to suit your specific needs:\n• Small (15ml)\n• Medium (40ml)\n• Large (100ml)",
+      "image_url": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&q=80&w=600",
+      "gallery": [],
+      "category": "Dye",
+      "rating": 4.6,
+      "reviews": 42,
+      "features": [
+        "Penetrating formula",
+        "Permanent color",
+        "Deep color restoration",
+        "Available in 2 Essential Colors"
+      ],
+      "sizes": [
+        "Small (15ml)",
+        "Medium (40ml)",
+        "Large (100ml)"
+      ],
+      "colors": [
+        "Black",
+        "Brown"
+      ],
+      "created_at": "2023-01-04T00:00:00.000Z",
+      "updated_at": "2023-01-04T00:00:00.000Z"
+    },
+    {
+      "id": "prod-10",
+      "name": "Liquid Shoe Polish",
+      "price": 15,
+      "description": "Quick and easy shine with our premium Liquid Shoe Polish. Perfect for on-the-go touch-ups and daily maintenance.",
+      "image_url": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&q=80&w=600",
+      "gallery": [],
+      "category": "Liquid",
+      "rating": 4.8,
+      "reviews": 112,
+      "features": [
+        "Instant shine",
+        "Easy applicator sponge",
+        "Nourishes leather",
+        "No buffing required"
+      ],
+      "sizes": [
+        "75ml"
+      ],
+      "colors": [
+        "Black",
+        "Neutral"
+      ],
+      "created_at": "2023-01-05T00:00:00.000Z",
+      "updated_at": "2023-01-05T00:00:00.000Z"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-home",
+      "slug": "home",
+      "title": "Home",
+      "hero_title": "MORE THAN JUST A SHINE",
+      "hero_subtitle": "More than just a shine details",
+      "hero_image": "",
+      "seo_title": "RIC Shoe Care - Premium Restoration & Wholesale",
+      "seo_desc": "Premium AI-powered shoe cleaning and restoration service. Shop specialized shoe polish, creams, and dyes.",
+      "cta_text": "Scan Your Shoe",
+      "images": {
+        "about_section_1": "",
+        "about_section_2": "",
+        "about_section_3": "",
+        "about_section_4": ""
+      },
+      "text_content": {},
+      "created_at": "2023-01-01T00:00:00.000Z",
+      "updated_at": "2023-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "page-about",
+      "slug": "about",
+      "title": "About Us",
+      "hero_title": "Crafting Excellence in Shoe Care",
+      "hero_subtitle": "With over two decades of expertise, we bring you the finest formulations for your footwear.",
+      "hero_image": "",
+      "seo_title": "About RIC Shoe Care",
+      "seo_desc": "Learn about RIC Shoe Care, established in 2003.",
+      "cta_text": "",
+      "images": {
+        "story_image": ""
+      },
+      "text_content": {},
+      "created_at": "2023-01-01T00:00:00.000Z",
+      "updated_at": "2023-01-01T00:00:00.000Z"
+    }
+  ],
+  "site_settings": {
+    "id": "config",
+    "brand_name": "RIC Shoe Care",
+    "contact_email": "doricindustries@gmail.com",
+    "logo_url": "",
+    "favicon_url": "",
+    "social_links": {
+      "instagram": "https://instagram.com/ricshoecare",
+      "facebook": "https://facebook.com/ricshoecare",
+      "tiktok": "https://tiktok.com/@ricshoecare"
+    },
+    "created_at": "2023-01-01T00:00:00.000Z",
+    "updated_at": "2023-01-01T00:00:00.000Z"
+  },
+  "analytics_events": [
+    {
+      "id": "evt-1788768384244-2yp3dauzgqk",
+      "event_type": "page_view",
+      "page_path": "/",
+      "event_name": "",
+      "metadata": {},
+      "created_at": "2026-09-07T08:06:24.244Z"
+    }
+  ]
+}

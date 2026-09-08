@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-300: #fdba74;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-primary-800: #9a3412;
+  --color-primary-900: #7c2d12;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* FOUC Prevention Styles */
+.fouc-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fouc-hidden.fouc-ready {
+  opacity: 1;
+}
+
+/* Logo Stability */
+.logo-container {
+  width: 200px; /* Hard-coded dimensions as requested */
+  height: 96px; /* Matching h-24 in Navbar.tsx */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-contain: contain;
+}
