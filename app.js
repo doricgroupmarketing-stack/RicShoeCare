@@ -6,9 +6,15 @@ const path = require('path');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 
-const serverBundle = path.join(__dirname, 'dist', 'server.cjs');
+const candidates = [
+  path.join(__dirname, 'dist', 'server.cjs'),
+  path.join(__dirname, 'server.cjs'),
+  path.join(process.cwd(), 'dist', 'server.cjs'),
+  path.join(process.cwd(), 'server.cjs'),
+];
+const serverBundle = candidates.find(p => fs.existsSync(p));
 
-if (fs.existsSync(serverBundle)) {
+if (serverBundle) {
   // Load the compiled Express server and Vite static file bundle
   require(serverBundle);
 } else {

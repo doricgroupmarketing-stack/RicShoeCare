@@ -19,7 +19,7 @@ git push origin main
 2. Click **Create Application**:
    - **Node.js version**: `20.x` (or `18.x`)
    - **Application mode**: `Production`
-   - **Application root**: `repositories/RicShoeCare` (this maps to `/home/ricshoec/repositories/RicShoeCare/`)
+   - **Application root**: `public_html` (this maps to `/home/ricshoec/public_html/`)
    - **Application URL**: select your domain / subdomain (e.g. `ricshoecare.co.za`)
    - **Application startup file**: `app.js`
 3. Click **Create**.
@@ -28,16 +28,16 @@ git push origin main
 1. In cPanel, navigate to **Files** → **Git Version Control**.
 2. Click **Create**:
    - **Clone URL**: your GitHub repository URL (e.g., `https://github.com/doricgroup/RicShoeCare.git`)
-   - **Repository Path**: `/home/ricshoec/repositories/RicShoeCare`
-   - **Repository Name**: `RicShoeCare`
+   - **Repository Path**: `/home/ricshoec/public_html`
+   - **Repository Name**: `public_html`
 3. Click **Create**.
 
 ### 4. Deploy via .cpanel.yml
-1. In **Git Version Control**, click **Manage** next to `RicShoeCare`.
+1. In **Git Version Control**, click **Manage** next to the repository.
 2. Open the **Pull or Deploy** tab.
 3. Click **Update from Remote** (to pull the latest commit from GitHub).
 4. Click **Deploy HEAD Commit**.
-   - The `.cpanel.yml` file will safely prepare the files in `/home/ricshoec/repositories/RicShoeCare/` and touch `tmp/restart.txt` to trigger Phusion Passenger to reload.
+   - The `.cpanel.yml` file will safely prepare the files in `/home/ricshoec/public_html/`, copy static assets for direct web serving, and touch `tmp/restart.txt` to trigger Phusion Passenger to reload.
 
 ### 5. Install NPM Packages
 1. In cPanel, go back to **Setup Node.js App**.

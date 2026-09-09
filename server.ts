@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import { localStore } from "./server/localStore";
 
 async function startServer() {
@@ -170,7 +171,13 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = path.join(process.cwd(), "dist");
+    const distCandidates = [
+      path.join(process.cwd(), "dist"),
+      path.join(__dirname, "dist"),
+      process.cwd(),
+      __dirname,
+    ];
+    const distPath = distCandidates.find(p => fs.existsSync(path.join(p, "index.html"))) || path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
     app.get("*all", (_req, res) => {
       res.sendFile(path.join(distPath, "index.html"));

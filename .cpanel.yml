@@ -2,4 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ricshoec/public_html/
-    - /bin/cp -r * $DEPLOYPATH
+    - /bin/mkdir -p /home/ricshoec/public_html/
+    - if [ "${PWD%/}" != "/home/ricshoec/public_html" ]; then /bin/cp -R * /home/ricshoec/public_html/; fi
+    - if [ -d "/home/ricshoec/public_html/dist" ]; then /bin/cp -R /home/ricshoec/public_html/dist/* /home/ricshoec/public_html/; fi
+    - /bin/mkdir -p /home/ricshoec/public_html/public
+    - if [ -d "/home/ricshoec/public_html/dist" ]; then /bin/cp -R /home/ricshoec/public_html/dist/* /home/ricshoec/public_html/public/; fi
+    - /bin/mkdir -p /home/ricshoec/public_html/tmp
+    - /bin/touch /home/ricshoec/public_html/tmp/restart.txt
+    - if command -v npm >/dev/null 2>&1; then (cd /home/ricshoec/public_html/ && npm install --omit=dev --no-audit --no-fund) || true; fi
